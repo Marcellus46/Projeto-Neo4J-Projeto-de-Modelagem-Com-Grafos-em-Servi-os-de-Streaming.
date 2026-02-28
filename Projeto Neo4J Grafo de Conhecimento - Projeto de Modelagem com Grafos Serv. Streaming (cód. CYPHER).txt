@@ -1,0 +1,35 @@
+PROJETO Neo4J GRAFO DE CONHECIMENTO.
+Projeto de Modelagem  Com Grafos em Serviços de Streaming.
+
+Código em Cypher
+
+CREATE (:Suspense {`Classificação`: "Idade"})<-[:Em_Gênero]-(n6:Sobrenatural {Streaming: "FlixStar"})<-[:Assistiu_Série {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "Marcelo"})-[:Assistiu_Filme {`Avaliação`: "Feedback"}]->(n1:`O Senhor Dos Anéis ` {Streaming: "FlixStar"})-[:Em_Gênero]->(:Fantasia {`Classificação`: "Idade"}),
+(:`Peter Jackson` {`Direção`: "Filme"})<-[:Dirigiu_Em_Filme]-(n1)-[:Atuou_Em_Filme]->(:`Ian McKellen & Elijah Wood` {`Atuação`: "Filme"}),
+(:Fantasia {`Classificação`: "Idade"})<-[:Em_Gênero]-(n17:`O Robbit` {Streaming: "FlixStar"})<-[:Assistiu_Filme {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "João"})-[:Assistiu_Série {`Avaliação`: "Feedback"}]->(n13:`Cavaleiros Do Zodíaco - Versão Brasileira` {Streaming: "FlixStar"})-[:Em_Gênero]->(:`Animação_Ação` {`Classificação`: "Idade"}),
+(:`Ação` {`Classificação`: "Idade"})<-[:Em_Gênero_Série]-(n35:`Game Of Thrones` {Streaming: "FlixStar"})<-[:Assistiu_Série {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "MARTA"})-[:Assistiu_Filme {`Avaliação`: "Feedback"}]->(n23:Gladiador {Streaming: "FlixStar"})-[:Em_Gênero]->(:Aventura {`Classificação`: "Idade"}),
+(:`Ficção ` {`Classificação`: "Idade"})<-[:Em_Gênero]-(n31:`Star Wars - The Mandalorian` {Streaming: "FlixStar"})<-[:Assistiu_Série {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "LIKA"})-[:Assistiu_Filme {`Avaliação`: "Feedback"}]->(n27:`O Rei Arthur` {Streaming: "FlixStar"})-[:Em_Gênero]->(:Aventura {`Classificação`: "Idade"}),
+(:`Antoine Fuqua` {`Direçâo`: "Filme"})<-[:Dirigiu_Em_Filme]-(n27)-[:Atuou_Em_Filme]->(:`Clive Owen` {`Atuação`: "Filme"}),
+(:`Jon Favreau e Dave Filoni.`)<-[:Dirigiu_Em_Série]-(n31)-[:Atuou_Em_Série]->(:`Pedro Pascal` {`Atuaçâo`: "Sèrie"}),
+({`Direção`: "Série"})<-[:Dirigiu_Em_Série]-(n35)-[:Atuou_Em_Série]->({`Atuação`: "Série"}),
+(:` Gilberto Baroli ` {`Direção`: "Série"})<-[:Dirigiu_Em_Série]-(n13)-[:Atuou_Em_Série]->(:`Hermes Baroli & Letícia Quinto` {`Atuação`: "Série"}),
+(:`Ridley Scott` {`Direção`: "Filme"})<-[:Dirigiu_Em_Filme]-(n23)-[:Atuou_Em_Filme]->(:`Russel Crowe` {`Atuação`: "Filme"}),
+(:`Erick kripke` {`Direçâo`: "Série"})<-[:Dirigiu_Em_Série]-(n6)-[:Atuou_Em_Série]->(:`Jared Padalecki & Jensen Ackles` {`Atuaçâo`: "Série"}),
+(:`Peter Jackson` {`Direção`: "Filme"})<-[:Dirigiu_Em_Filme]-(n17)-[:Atuou_Em_Filme]->(:`Ian McKellen & Elijah Wood` {`Atuação`: "Filme"}),
+(:`Jacqueline Bisset` {`Atuação`: "Filme"})<-[:Atuou_Em_Filme]-(n62:`Joana D'Arc` {Streaming: "FlixStar"})<-[:Assistiu_Filme {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "Tício"})-[:Assistiu_Série {`Avaliação`: "Feedback"}]->(n58:`Knightfall Os Cavaleiros Templários ` {Streaming: "FlixStar"})-[:Atuou_Em_Série]->(:`Tom Cullen`),
+(:`Guerra Medieval` {`Classificação`: "Idade"})<-[:Em_Gênero]-(n58)-[:Dirigiu-Em_Série]->(),
+(:Aventura {`Classificação`: "Idade"})<-[:Em_Gênero]-(n62)-[:Dirigiu_Em_Filme]->(:`Christian Duguay` {`Direção`: "Filme"}),
+(:Suspense {`Classificação`: "Idade"})<-[:Em_Gênero_Série]-(n69:`Maria Madalena` {Streaming: "FlixStar"})<-[:Assistiu_Série {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "Tércio"})-[:Assistiu_Filme {`Avaliação`: "Feedback"}]->(n68:Alexandre {Streaming: "FlixStar"})-[:Em_Gênero]->(:Suspense {`Classificação`: "Idade"}),
+(:`Colin Farrell & Angelina Pull` {`Atuação`: "Filme"})<-[:Atuou_Em_Filme]-(n68)-[:Dirigiu_Em_Filme]->(:`Oliver Stone` {`Direção`: "Filme"}),
+({`Direção`: "Série"})<-[:Dirigiu_Em_Série]-(n69)-[:Atuou_Em_Série]->({`Atuação`: "Série"}),
+({`Atuação`: "Série"})<-[:Autou_Em_Série]-(n82:`Os Lucros do Amor` {Streaming: "FlixStar"})<-[:Assistiu_Série {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "Mércia"})-[:Assistiu_Filme {`Avaliação`: "Feedback"}]->(n79:Troia {Streaming: "FlixStar"})-[:Dirigiu_Em_Filme]->(:`Wolfgang Petersen` {`Direção`: "Filme"}),
+(:Aventura {`Classificação`: "Idade"})<-[:Em_Gênero_Filme]-(n79)-[:Atuou_Em_Filme]->(:`Brad Pitt` {`Atuação`: "Filme"}),
+({`Direção`: "Série"})<-[:Dirigiu_Em_Série]-(n82)-[:Em_Gênero_Série]->(:Romance {`Classificação`: "Idade"}),
+(:`Ação` {`Classificação`: "Idade"})<-[:Em_Gênero_Série]-(n90:Jaspion {Streaming: "FlixStar"})<-[:Assistiu_Em_Série {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "Alfredo"})-[:Assistiu_Em_Filme {`Avaliação`: "Feedback"}]->(n89:`O Último Imperador` {Streaming: "FlixStar"})-[:Dirigiu_Em_Filme]->(:`Bernardo Bertolucci` {`Direção`: "Filme"}),
+(:Suspense {`Classificação`: "Idade"})<-[:Em_Gênero_Filme]-(n89)-[:Atuou_Em_Filme]->(:`John Lone` {`Atuação`: "Filme"}),
+({`Atuação`: "Série"})<-[:Atuou_Em_Série]-(n90)-[:Dirigiu_Em_Série]->({`Direção`: "Série"}),
+(:Romance {`Classificação`: "Idade"})<-[:Em_Gênero_Série]-(n98:`The Vampire Diaries` {Streaming: "FlixStar"})<-[:Assistiu_Em_Série {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "Carlos"})-[:Assistiu_Em_Filme {`Avaliação`: "Feedback"}]->(n97:`Piratas Do Caribe` {Streaming: "FlixStar"})-[:Atuou_Em_Filme]->(:`Jonny Deep` {`Atuação`: "Filme"}),
+(:Aventura {`Classificação`: "Idade"})<-[:Em_Gênero_Filme]-(n97)-[:Dirigiu_Em_Filme]->(:`Gore Verbinski` {`Direção`: "Filme"}),
+({`Direção`: "Série"})<-[:Dirigiu_Em_Série]-(n98)-[:Atuou_Em_Série]->({`Atuação`: "Série"}),
+(:`Jim Carry` {`Atuação`: "Filme"})<-[:Atuou-Em_Filme]-(n106:`O Máskara` {Streaming: "FlixStar"})<-[:Assistiu_Em_Filme {`Avaliação`: "Feedback"}]-(:Pessoa {NOME: "Nerfetiti"})-[:Assistiu_Em_Série {`Avaliação`: "Feedback"}]->(n105:`Pokemón` {Streaming: "FlixStar"})-[:Em_Gênero]->(:`Animação_Ação` {`Classificação`: "Idade"}),
+(:`Comédia` {`Classificação`: "Idade"})<-[:Em-Gênero_Filme]-(n106)-[:Dirigiu_Em_Filme]->({`Direção`: "Filme"}),
+({`Atuação`: "Série"})<-[:Atuou_Em_Série]-(n105)-[:Dirigiu_Em_Série]->({`Direção`: "Série"})
